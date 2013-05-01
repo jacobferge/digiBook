@@ -1,14 +1,3 @@
-
-/* MOBILE STYLES */
-@media only screen and (max-width: 767px){
-	
-
-	
-}
-
-/* TABLET STYLES */
-@media only screen and (min-width: 768px) and (max-width: 977px){
-
 body{
 	background-color:#000;
 }
@@ -21,6 +10,7 @@ a{
 	width:100%;
 	height:100%;
 	overflow:hidden;
+	position:fixed;
 }
 	
 #bookFrame{
@@ -32,25 +22,124 @@ a{
 
 #bookScroller{
 	position:absolute;
-	width:2600%;
+	width:2300%;
 	height:100%;
 	top:0;
 }
 
 
 .pages{
-	width:3.8461%;
+	width:4.34782%;
 	height:100%;
 	float:left;
 	background-size:100%;
 	background-position:center;
-	background-image:url(../images/one.jpg);
 	background-repeat:no-repeat;
+}
+
+#logo{
+	background-image:url(../images/start.jpg);
+}
+
+#intro{
+	background-image:url(../images/intro.jpg);
 }
 
 #one{
 	background-image:url(../images/one.jpg);
 }
+
+#two{
+	background-image:url(../images/two.jpg);
+}
+
+#three{
+	background-image:url(../images/three.jpg);
+}
+
+#four{
+	background-image:url(../images/four.jpg);
+}
+
+#five{
+	background-image:url(../images/five.jpg);
+}
+
+#six{
+	background-image:url(../images/six.jpg);
+}
+
+#seven{
+	background-image:url(../images/seven.jpg);
+}
+
+#eight{
+	background-image:url(../images/eight.jpg);
+}
+
+#nine{
+	background-image:url(../images/nine.jpg);
+}
+
+#ten{
+	background-image:url(../images/ten.jpg);
+}
+
+#eleven{
+	background-image:url(../images/eleven.jpg);
+}
+
+#twelve{
+	background-image:url(../images/twelve.jpg);
+}
+
+#thirteen{
+	background-image:url(../images/thirteen.jpg);
+}
+
+#fourteen{
+	background-image:url(../images/fourteen.jpg);
+}
+
+#fifteen{
+	background-image:url(../images/fifteen.jpg);
+}
+
+#sixteen{
+	background-image:url(../images/sixteen.jpg);
+}
+
+#seventeen{
+	background-image:url(../images/seventeen.jpg);
+}
+
+#eighteen{
+	background-image:url(../images/eighteen.jpg);
+}
+
+#nineteen{
+	background-image:url(../images/nineteen.jpg);
+}
+
+#twenty{
+	background-image:url(../images/twenty.jpg);
+}
+
+#twentyone{
+	background-image:url(../images/twentyone.jpg);
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 767px){
+	
+
+	
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 768px) and (max-width: 977px){
+
+
 
 
 }

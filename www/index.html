@@ -28,12 +28,12 @@
             <div id="bookFrame">
             
                 <div id="bookScroller">
+                	
+                    <div class="pages" id="logo">
+                    </div> <!--logo-->
                     
                     <div class="pages" id="intro">
                     </div> <!--intro-->
-                    
-                    <div class="pages" id="table">
-                    </div> <!--table-->
                     
                     <div class="pages" id="one">
                     </div> <!--1-->
@@ -97,21 +97,6 @@
                     
                     <div class="pages" id="twentyone">
                     </div> <!--21-->
-                    
-                    <div class="pages" id="twnetytwo">
-                    </div> <!--22-->
-                    
-                    <div class="pages" id="twentythree">
-                    </div> <!--23-->
-                    
-                    <div class="pages" id="twentyfour">
-                    </div> <!--24-->
-                    
-                    <div class="pages" id="twentyfive">
-                    </div> <!--25-->
-                    
-                    <div class="pages" id="twentysix">
-                    </div> <!--26-->
                 
                 </div> <!--bookScroller-->
             
@@ -125,7 +110,7 @@
 
 	/* Pages Slider */
 	
-	var numberOfScreensP = 26;
+	var numberOfScreensP = 23;
 	var currentScreenP = 1;
 	var previousScrollerButtonVisibleP = false
 	var nextScrollerButtonVisibleP = true
@@ -140,6 +125,41 @@
 		
 		$('#bookScroller').on('swipeleft', function(event){ 
 			event.preventDefault();
+			scrollToNextP();
+		});
+		
+		// FUNCTIONS
+		function scrollToPreviousP(){
+			if(currentScreenP>1){
+				
+			  $("#bookScroller").animate({
+				left: '+='+scrollDistance
+			  }, 1000); 
+			  
+			  currentScreenP--;
+			};
+			
+		};
+		
+		function scrollToNextP(){
+			if(currentScreenP<numberOfScreensP){
+				
+			  $("#bookScroller").animate({
+				left: '-='+scrollDistance
+			  }, 1000); 
+			  
+			  currentScreenP++;
+			};
+			
+		};
+		
+////////////////////////////////////////////////////////////////////////////////
+	
+	</script>
+        
+    </body>
+
+</html>preventDefault();
 			scrollToNextP();
 		});
 		
