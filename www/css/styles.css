@@ -1,0 +1,62 @@
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 767px){
+	
+
+	
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 768px) and (max-width: 977px){
+
+body{
+	background-color:#000;
+}
+
+a{
+	display:block;
+}
+
+#book{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+	
+#bookFrame{
+	position:relative;
+	width:100%;
+	padding-top:75%;
+	overflow:hidden;
+}
+
+#bookScroller{
+	position:absolute;
+	width:2600%;
+	height:100%;
+	top:0;
+}
+
+
+.pages{
+	width:3.8461%;
+	height:100%;
+	float:left;
+	background-size:100%;
+	background-position:center;
+	background-image:url(../images/one.jpg);
+	background-repeat:no-repeat;
+}
+
+#one{
+	background-image:url(../images/one.jpg);
+}
+
+
+}
+
+
+/* DESKTOP STYLES */
+@media only screen and (min-width: 978px){
+	
+}
