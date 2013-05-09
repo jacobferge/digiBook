@@ -113,9 +113,9 @@
 	
 	var numberOfScreensP = 23;
 	var currentScreenP = 1;
-	var previousScrollerButtonVisibleP = false
-	var nextScrollerButtonVisibleP = true
-	var scrollDistance = '100%';
+	var previousScrollerButtonVisibleP = false;
+	var nextScrollerButtonVisibleP = true;
+	var scrollDistance = 2048;
 
 		
 		// TOUCH EVENTS
@@ -135,7 +135,7 @@
 				
 			  $("#bookScroller").animate({
 				left: '+='+scrollDistance
-			  }, 1000); 
+			  }, 500); 
 			  
 			  currentScreenP--;
 			};
@@ -147,7 +147,7 @@
 				
 			  $("#bookScroller").animate({
 				left: '-='+scrollDistance
-			  }, 1000); 
+			  }, 500); 
 			  
 			  currentScreenP++;
 			};
@@ -160,7 +160,7 @@
 		
 		// TOUCH EVENTS
 		
-		$('#home').on('taphold', function(event){ 
+		$('#home').on('tap', function(event){ 
 			event.preventDefault();
 			scrollToStart();
 		});
