@@ -10,12 +10,6 @@
         
         <link href="css/reset.css" rel="stylesheet" type="text/css" />
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        
-        <script src="js/jquery-1.8.2.min.js"></script>
-        
-        <script src="js/jquery.mobile.custom.min.js" type="text/javascript"></script>
-        
-        <script src="js/jquery.easing.1.3.js" type="text/javascript" ></script>
     
     </head>
 
@@ -25,85 +19,89 @@
     
             <div id="bookFrame">
             
-                <div id="bookScroller">
+                <div id="bookScroller" class="swipe">
                 	
-                    <div class="pages" id="logo">
-                    </div> <!--logo-->
-                    
-                    <div class="pages" id="intro">
-                    </div> <!--intro-->
-                    
-                    <div class="pages" id="one">
-                    </div> <!--1-->
-                    
-                    <div class="pages" id="two">
-                    </div> <!--2-->
-                    
-                    <div class="pages" id="three">
-                    </div> <!--3-->
-                    
-                    <div class="pages" id="four">
-                    </div> <!--4-->
-                    
-                    <div class="pages" id="five">
-                    </div> <!--5-->
-                    
-                    <div class="pages" id="six">
-                    </div> <!--6-->
-                    
-                    <div class="pages" id="seven">
-                    </div> <!--7-->
-                    
-                    <div class="pages" id="eight">
-                    </div> <!--8-->
-                    
-                    <div class="pages" id="nine">
-                    </div> <!--9-->
-                    
-                    <div class="pages" id="ten">
-                    </div> <!--10-->
-                    
-                    <div class="pages" id="eleven">
-                    </div> <!--11-->
-                    
-                    <div class="pages" id="twelve">
-                    </div> <!--12-->
-                    
-                    <div class="pages" id="thirteen">
-                    </div> <!--13-->
-                    
-                    <div class="pages" id="fourteen">
-                    </div> <!--14-->
-                    
-                    <div class="pages" id="fifteen">
-                    </div> <!--15-->
-                    
-                    <div class="pages" id="sixteen">
-                    </div> <!--16-->
-                    
-                    <div class="pages" id="seventeen">
-                    </div> <!--17-->
-                    
-                    <div class="pages" id="eighteen">
-                    </div> <!--18-->
-                    
-                    <div class="pages" id="nineteen">
-                    </div> <!--19-->
-                    
-                    <div class="pages" id="twenty">
-                    </div> <!--20-->
-                    
-                    <div class="pages" id="twentyone">
-                    </div> <!--21-->
+                    <ul>
+                        <li style='display:block' class="pages" id="logo">
+                        </li> <!--logo-->
+                        
+                        <li style='display:none' class="pages" id="intro">
+                        </li> <!--intro-->
+                        
+                        <li style='display:none' class="pages" id="one">
+                        </li> <!--1-->
+                        
+                        <li style='display:none' class="pages" id="two">
+                        </li> <!--2-->
+                        
+                        <li style='display:none' class="pages" id="three">
+                        </li> <!--3-->
+                        
+                        <li style='display:none' class="pages" id="four">
+                        </li> <!--4-->
+                        
+                        <li style='display:none' class="pages" id="five">
+                        </li> <!--5-->
+                        
+                        <li style='display:none' class="pages" id="six">
+                        </li> <!--6-->
+                        
+                        <li style='display:none' class="pages" id="seven">
+                        </li> <!--7-->
+                        
+                        <li style='display:none' class="pages" id="eight">
+                        </li> <!--8-->
+                        
+                        <li style='display:none' class="pages" id="nine">
+                        </li> <!--9-->
+                        
+                        <li style='display:none' class="pages" id="ten">
+                        </li> <!--10-->
+                        
+                        <li style='display:none' class="pages" id="eleven">
+                        </li> <!--11-->
+                        
+                        <li style='display:none' class="pages" id="twelve">
+                        </li> <!--12-->
+                        
+                        <li style='display:none' class="pages" id="thirteen">
+                        </li> <!--13-->
+                        
+                        <li style='display:none' class="pages" id="fourteen">
+                        </li> <!--14-->
+                        
+                        <li style='display:none' class="pages" id="fifteen">
+                        </li> <!--15-->
+                        
+                        <li style='display:none' class="pages" id="sixteen">
+                        </li> <!--16-->
+                        
+                        <li style='display:none' class="pages" id="seventeen">
+                        </li> <!--17-->
+                        
+                        <li style='display:none' class="pages" id="eighteen">
+                        </li> <!--18-->
+                        
+                        <li style='display:none' class="pages" id="nineteen">
+                        </li> <!--19-->
+                        
+                        <li style='display:none' class="pages" id="twenty">
+                        </li> <!--20-->
+                        
+                        <li style='display:none' class="pages" id="twentyone">
+                        </li> <!--21-->
+                    </ul>
                 
                 </div> <!--bookScroller-->
+                
+                <a id="home"  href="#" onclick='mySwipe.slide(0, 500);return false;'>
+            	</a>
             
             </div> <!--bookFrame-->
         
-        	<a id="home" href="#">
-            </a>
-        
         </div> <!--book-->
+    
+    <script src='js/swipe.js'></script>
     
     <script>
 	
@@ -111,69 +109,20 @@
 
 	/* Pages Slider */
 	
-	var numberOfScreensP = 23;
-	var currentScreenP = 1;
-	var previousScrollerButtonVisibleP = false;
-	var nextScrollerButtonVisibleP = true;
-	var scrollDistance = 1024;
-
-		
-		// TOUCH EVENTS
-		$('#bookScroller').on('swiperight', function(event){ 
-			event.preventDefault();
-			scrollToPreviousP();
-		});
-		
-		$('#bookScroller').on('swipeleft', function(event){ 
-			event.preventDefault();
-			scrollToNextP();
-		});
-		
-		// FUNCTIONS
-		function scrollToPreviousP(){
-			if(currentScreenP>1){
-				
-			  $("#bookScroller").animate({
-				left: '+='+scrollDistance
-			  }, 500); 
-			  
-			  currentScreenP--;
-			};
-			
-		};
-		
-		function scrollToNextP(){
-			if(currentScreenP<numberOfScreensP){
-				
-			  $("#bookScroller").animate({
-				left: '-='+scrollDistance
-			  }, 500); 
-			  
-			  currentScreenP++;
-			};
-			
-		};
-		
-////////////////////////////////////////////////////////////////////////////////
-
-/* Home Button*/
-		
-		// TOUCH EVENTS
-		
-		$('#home').on('tap', function(event){ 
-			event.preventDefault();
-			scrollToStart();
-		});
-		
-		// FUNCTIONS
-		function scrollToStart(){
-				
-			  $("#bookScroller").animate({
-				left:0
-			  }, 1000); 
-			
-		};
-		
+	var mySwipe = new Swipe(document.getElementById('bookScroller'));
+	
+	mySwipe.speed = 1000;
+	console.log(mySwipe.speed);
+	
+	
+	/*
+	
+	window.mySwipe = new Swipe(document.getElementById('bookScroller'), {
+	  speed: 500,
+	  continuous: true,
+	  stopPropagation: true
+	});
+		*/
 ////////////////////////////////////////////////////////////////////////////////
 	
 	</script>
